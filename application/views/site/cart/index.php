@@ -113,15 +113,7 @@
                         </div>
                         <div class="shopping-cart-coupon">
                             <div class="row">
-                                <div class="col-md-5 col-sm-12">
-                                    <form action="#" method="POST" class="coupon-form">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Coupon Code">
-                                            <span class="icon-coupon"></span>
-                                        </div>
-                                        <button type="submit" class="btn-submit"></button>
-                                    </form>
-                                </div>
+
                                 <div class="col-md-7 col-sm-12">
                                     <button type="submit" class="btn-update-cart">UPDATE CART</button>
                                 </div>
