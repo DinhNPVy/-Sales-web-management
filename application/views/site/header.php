@@ -448,10 +448,10 @@
             <div class="col-md-5 col-sm-5">
                 <div class="left-nav">
                     <div class="location dropdown">
-                        <a id="label1" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            <span class="icon"><i class="ion-ios-location" aria-hidden="true"></i></span>
-                            <span>Our Store</span>
-                            <span class="ion-chevron-down"></span>
+                        <a id="label1" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <!-- <span class="icon"><i class="ion-ios-location" aria-hidden="true"></i></span> -->
+                            <span></span>
+
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="label1">
                             <li><a href="#">New York</a></li>
@@ -459,10 +459,10 @@
                         </ul>
                     </div>
                     <div class="language dropdown">
-                        <a href="<?php ?>" id="vietnamese" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            <span class="icon"><i class="ion-ios-world-outline" aria-hidden="true"></i></span>
-                            <span>Vietnamese</span>
-                            <span class="ion-chevron-down"></span>
+                        <!-- <a href="#" id="vietnamese" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="icon"><i class="ion-ios-world-outline" aria-hidden="true"></i></span> -->
+                        <span></span>
+
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="label2">
                             <li><a href="#">English</a></li>
@@ -523,7 +523,7 @@
                 <div class="block block-option">
                     <ul>
                         <li><a href="<?php echo base_url('wishlist') ?>"><i class="ion-ios-heart fa-1a" aria-hidden="true"> </i>Wishlist</a></li>
-                        <li><a href="#"><i class="ion-arrow-swap fa-1a" aria-hidden="true"></i>Compare</a></li>
+                        <!-- <li><a href="#"><i class="ion-arrow-swap fa-1a" aria-hidden="true"></i>Compare</a></li> -->
                     </ul>
                 </div>
                 <div class="block block-1">
@@ -646,7 +646,7 @@
                         </li>
                         <?php if (isset($user_info)) : ?>
                             <li class=" menu-demo-page menu-item-has-child dropdown">
-                                <a href="<?php echo site_url('transaction/index') ?>" title="Sellerdemo">ordered</a>
+                                <a href="<?php echo site_url('transaction/index') ?>" title="Order">ordered</a>
 
                             </li>
                         <?php endif; ?>

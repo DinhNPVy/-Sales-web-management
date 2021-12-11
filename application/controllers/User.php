@@ -17,7 +17,7 @@ class User extends MY_Controller
         //kiêm tra xem email đã tồn tại chưa
         if ($this->user_model->check_exists($where)) {
             //trả về thông báo lỗi
-            $this->form_validation->set_message(__FUNCTION__, 'Email đã tồn tại');
+            $this->form_validation->set_message(__FUNCTION__, 'Email already exists');
             return false;
         }
         return true;
