@@ -644,10 +644,12 @@
                             <a href="<?php echo site_url('product/market') ?>" title="Marketplace">marketplace</a>
 
                         </li>
-                        <li class=" menu-demo-page menu-item-has-child dropdown">
-                            <a href="<?php echo site_url('transaction/index') ?>" title="Sellerdemo">ordered</a>
+                        <?php if (isset($user_info)) : ?>
+                            <li class=" menu-demo-page menu-item-has-child dropdown">
+                                <a href="<?php echo site_url('transaction/index') ?>" title="Sellerdemo">ordered</a>
 
-                        </li>
+                            </li>
+                        <?php endif; ?>
                         <li class="dropdown menu-contact-page menu-item-has-child">
                             <a href="<?php echo base_url('contact/index') ?>" title="ContactUs">CONTACT US</a>
 
