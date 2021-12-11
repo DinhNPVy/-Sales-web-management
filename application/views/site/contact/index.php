@@ -28,10 +28,10 @@
 <section class="contact-us">
     <div class="container">
         <div class="heading-sub">
-            <h3 class="pull-left">Create Account</h3>
+            <h3 class="pull-left">Contact US</h3>
             <ul class="other-link-sub pull-right">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#pages">Create Account</a></li>
+                <li><a href="#pages">Contact Us</a></li>
 
             </ul>
             <div class="clearfix"></div>
@@ -73,7 +73,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <strong>Email *</strong>
-                                    <input type="text" name="email" id="email" class="form-control" value="<?php echo set_value('email') ?>">
+                                    <input type="text" name="email" id="email" class="form-control" value="<?php echo $user->email ?>">
                                     <div class="error" style="color:crimson"> <?php echo form_error('email') ?></div>
                                 </div>
                             </div>
@@ -82,11 +82,11 @@
                             <div class="row">
                                 <div class="col-md-6 col-xs-12">
                                     <strong>First & Last name *</strong>
-                                    <input type="text" name="name" id="name" class="form-control" value="<?php echo set_value('name') ?>">
+                                    <input type="text" name="name" id="name" class="form-control" value="<?php echo $user->name ?>">
                                 </div>
                                 <div class="col-md-6 col-xs-12">
                                     <strong>Phone *</strong>
-                                    <input type="text" name="phone" id="phone" class="form-control" value="<?php echo set_value('phone') ?>">
+                                    <input type="text" name="phone" id="phone" class="form-control" value="<?php echo $user->phone ?>">
                                     <div class="error" style="color:crimson"> <?php echo form_error('phone') ?></div>
                                 </div>
                             </div>
@@ -101,7 +101,7 @@
                                 </div>
                                 <div class="col-md-6 col-xs-12">
                                     <strong>Address *</strong>
-                                    <input name="address" id="address" tabindex="2" class="form-control" value="<?php echo set_value('address') ?>"></input>
+                                    <input name="address" id="address" tabindex="2" class="form-control" value="<?php echo $user->address ?>"></input>
                                     <div class="error" style="color:crimson"> <?php echo form_error('address') ?></div>
                                 </div>
                             </div>
