@@ -22,7 +22,6 @@
                                             <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">ID</th>
                                             <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Author</th>
                                             <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Phone</th>
-                                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Status</th>
                                             <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Join Date</th>
                                             <th class="text-secondary opacity-7"></th>
                                         </tr>
@@ -51,9 +50,7 @@
                                                     <p class="text-xs font-weight-bold mb-0"> <?php echo $row->phone ?></p>
 
                                                 </td>
-                                                <td class="align-middle text-center text-sm">
-                                                    <span class="badge badge-sm bg-gradient-success"> <?php echo $row->status ?></span>
-                                                </td>
+
 
 
 

@@ -34,6 +34,16 @@ class Contact extends MY_Controller
     {
 
         //neu ma co du lieu post len thi kiem tra
+        if (!$this->session->userdata('user_id_login')) {
+            redirect(site_url('user/login'));
+        }
+        // lay thong tin cua thanh vien
+        $user_id = $this->session->userdata('user_id_login');
+        $user = $this->user_model->get_info($user_id);
+        if (!$user) {
+            redirect();
+        }
+        $this->data['user'] = $user;
 
         $this->form_validation->set_rules('name', 'First & Last name', 'required');
         $this->form_validation->set_rules('email', 'Email', 'required|valid_email');

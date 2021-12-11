@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 $config = array(
     'admin' => array('index', 'add', 'edit', 'delete'),

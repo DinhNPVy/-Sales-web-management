@@ -1,3 +1,5 @@
+<!-- head -->
+<?php $this->load->view('admin/admin/head', $this->data) ?>
 <?php $this->load->view('admin/message', $this->data) ?>
 <!--   Core JS Files   -->
 <script src="<?php echo public_url('admin/assets') ?>/js/core/popper.min.js"></script>
