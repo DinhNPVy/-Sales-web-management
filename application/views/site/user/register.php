@@ -91,7 +91,7 @@
                                 </div>
                                 <div class="col-md-6 col-xs-12">
                                     <strong>Re-enter your password *</strong>
-                                    <input type="text" name="repassword" id="pass" class="form-control" value="">
+                                    <input type="password" name="repassword" id="pass" class="form-control" value="">
                                     <div class="error" style="color:crimson">
                                         <img class="pass" onclick="showpass()" src="<?php echo public_url('admin/assets') ?>/img/eye-outline.svg" alt="" style="height: 25px;">
 
