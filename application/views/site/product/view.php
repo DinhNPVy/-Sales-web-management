@@ -80,6 +80,7 @@
   			},
   			half: true,
   			click: function(score, evt) {
+  				alert(score);
   				var rate_count = $('.rate_count');
   				var rate_count_total = rate_count.text();
   				$.ajax({
@@ -152,6 +153,95 @@
   		});
   	})(jQuery);
   </script>
+  <script>
+  	$(document).ready(function() {
+  		/* 1. Visualizing things on Hover - See next part for action on click */
+  		$('#stars li').on('mouseover', function() {
+  			var onStar = parseInt($(this).data('score'), 10); // The star currently mouse on
+  			// Now highlight all the stars that's not after the current hovered star
+  			$(this).parent().children('li.star').each(function(e) {
+  				if (e < onStar) {
+  					$(this).addClass('hover');
+  				} else {
+  					$(this).removeClass('hover');
+  				}
+  			});
+
+  		}).on('mouseout', function() {
+  			$(this).parent().children('li.star').each(function(e) {
+  				$(this).removeClass('hover');
+  			});
+  		});
+
+
+  		/* 2. Action to perform on click */
+  		$('#stars li').on('click', function() {
+  			var onStar = parseInt($(this).data('score'), 10); // The star currently selected
+  			var stars = $(this).parent().children('li.star');
+
+  			for (i = 0; i < stars.length; i++) {
+  				$(stars[i]).removeClass('selected');
+  			}
+
+  			for (i = 0; i < onStar; i++) {
+  				$(stars[i]).addClass('selected');
+  			}
+  			// JUST RESPONSE (Not needed)
+  			var ratingValue = parseInt($('#stars li.selected').last().data('score'), 10); // so diem danh gia
+  			var msg = "";
+  			console.log(ratingValue)
+  			if (ratingValue > 1) {
+  				msg = "Thanks! You rated this " + ratingValue + " stars.";
+  			} else {
+  				msg = "We will improve ourselves. You rated this " + ratingValue + " stars.";
+  			}
+  			alert(msg);
+  		});
+
+
+  	});
+
+
+  	function responseMessage(msg) {
+  		$('.success-box').fadeIn(200);
+  		$('.success-box div.text-message').html("<span>" + msg + "</span>");
+  	}
+  </script>
+  <style>
+  	/* Rating Star Widgets Style */
+  	.rating-starss ul {
+  		list-style-type: none;
+  		padding: 0;
+  		-moz-user-select: none;
+  		-webkit-user-select: none;
+  		float: left
+  	}
+
+  	.rating-starss ul>li.star {
+  		display: inline-block;
+
+  	}
+
+  	/* Idle State of the stars */
+  	.rating-starss ul>li.star>i.fa {
+  		font-size: 15px;
+  		/* Change the size of the stars */
+  		color: #ccc;
+  		/* Color on idle state */
+  	}
+
+  	/* Hover state of the stars */
+  	.rating-starss ul>li.star.hover>i.fa {
+  		color: #FFCC36;
+  	}
+
+  	/* Selected state of the stars */
+  	.rating-starss ul>li.star.selected>i.fa {
+  		color: #FF912C;
+  	}
+  </style>
+
+
   <section class="shop-single-page">
   	<div class="container">
   		<div class="heading-sub">
@@ -198,16 +288,32 @@
   						<h3><a href="#"><?php echo $product->name ?></a></h3>
   						<div class="brandname">by <strong>SONY</strong></div>
   						<div class="ratingstar">
-  							<a href="#"><i class="fa fa-star fa-1" aria-hidden="true" style="color: gold;"></i></a>
-  							<a href="#"><i class="fa fa-star fa-1" aria-hidden="true" style="color: gold;"></i></a>
-  							<a href="#"><i class="fa fa-star fa-1" aria-hidden="true" style="color: gold;"></i></a>
-  							<a href="#"><i class="fa fa-star fa-1" aria-hidden="true" style="color: gold;"></i></a>
-  							<a href="#"><i class="fa fa-star fa-1" aria-hidden="true"></i></a>
-  							<span class="raty_detailt" style="margin: 5px;" id="<?php echo $product->id ?>" data-score='<?php echo $product->raty ?>'>
-  							</span>
-  							<b class="rate_count"><?php echo $product->rate_count ?></b>
-  							<a class="review">Add your review</a>
+  							<div class='rating-starss'>
+  								<ul id='stars'>
+  									<li class='star' title='Poor' data-score='1'>
+  										<i class='fa fa-star fa-fw'></i>
+  									</li>
+  									<li class='star ' title='Fair' data-score='2'>
+  										<i class='fa fa-star fa-fw'></i>
+  									</li>
+  									<li class='star ' title='Good' data-score='3'>
+  										<i class='fa fa-star fa-fw'></i>
+  									</li>
+  									<li class='star' title='Excellent' data-score='4'>
+  										<i class='fa fa-star fa-fw'></i>
+  									</li>
+  									<li class='star' title='WOW!!!' data-score='5'>
+  										<i class='fa fa-star fa-fw'></i>
+  									</li>
+  								</ul>
+  								<input id='<?php $product->id ?>' class='start' type="hidden" name="score" score="3">
+
+  							</div>
+  							<span class="raty_detailt" style="margin: 5px;" id="<?php echo $product->id ?>" data-score='  <?php echo $product->raty ?>'>
+
+
   						</div>
+
   						<div class="prod-price">
   							<?php if ($product->discount > 0) : ?>
   								<?php $price_new = $product->price - $product->discount; ?>
