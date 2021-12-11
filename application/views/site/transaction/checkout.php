@@ -85,7 +85,6 @@
                                     <tr>
                                         <td>IMAGE</td>
                                         <th>PRODUCT</th>
-                                        <th></th>
                                         <th>TOTAL</th>
                                     </tr>
                                 </thead>
@@ -121,10 +120,7 @@
 
                                         <h4>Cash On Delivery</h4>
                                     </option>
-                                    <option value="card">
 
-                                        <h4>Card Payments</h4>
-                                    </option>
 
 
                                 </select>
