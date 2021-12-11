@@ -5,7 +5,7 @@
                 <div class="photo">
                     <a href="#"><img style="border-radius: 50%; height: 120px" src="<?php echo public_url() ?>site/image/logo.png" alt="images" class="img-responsive"></a>
                 </div>
-                <p class="info-desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusant...</p>
+                <p class="info-desc">The ability to travel from one retailer to another while sitting at home has become a reality. Any product can now be ordered online...</p>
                 <div class="widget-info">
                     <?php foreach ($supports as $row) : ?>
                         <ul>
