@@ -179,7 +179,7 @@
                                     <div class="button-ver2">
                                         <a href="<?php echo base_url('cart/add/' . $row->id) ?>" class="addcart-ver2" title="Add to cart"><span><i class="fa fa-shopping-cart"></i></span>ADD TO CART</a>
                                         <a href="<?php echo base_url('product/view/' . $row->id) ?>" class="quickview1" title="quickview1"><i class="ion-eye fa-4" aria-hidden="true"></i></a>
-                                        <a href="#" class="wishlist1" title="wishlist1"><i class="ion-heart fa-4" aria-hidden="true"></i></a>
+                                        <a href="<?php echo base_url('wishlist/add/' . $row->id) ?>" class="wishlist1" title="wishlist1"><i class="ion-heart fa-4" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                             </div>
