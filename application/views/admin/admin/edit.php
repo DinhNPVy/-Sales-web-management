@@ -63,7 +63,7 @@
                                                 <?php echo form_error('phone') ?>
                                             </div>
                                         </div>
-                                        <!-- <div class="mb-3">
+                                        <div class="mb-3">
                                             <label for=""><span>Permissions: </span></label>
                                             <div>
                                                 <?php foreach ($config_permissions as $controller => $actions) : ?>
@@ -84,7 +84,7 @@
                                                     </div>
                                                 <?php endforeach; ?>
                                             </div>
-                                        </div> -->
+                                        </div>
 
 
                                         <div class="text-center">
