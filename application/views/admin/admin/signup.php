@@ -94,7 +94,7 @@
                                         <?php echo form_error('phone') ?>
                                     </div>
                                 </div>
-                                <!-- <div class="mb-3">
+                                <div class="mb-3">
 
                                     <label for=""><span>Permissions: </span></label>
                                     <div>
@@ -108,7 +108,7 @@
                                             </div>
                                         <?php endforeach; ?>
                                     </div>
-                                </div> -->
+                                </div>
 
                                 <div class="form-check form-check-info text-left">
                                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
