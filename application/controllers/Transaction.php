@@ -68,6 +68,7 @@ class Transaction extends MY_Controller
                     $data = array(
                         'status'         => 0, // trang thai chua thanh toan
                         'product_name'   => $row['name'],
+                        'product_id'     => $row['id'],
                         'image_link'     => $row['image_link'],
                         'qty'            => $row['qty'],
                         'user_id'        => $user_id,

@@ -71,7 +71,7 @@
                                 <div class="mb-3">
                                     <input id="pass" type="password" class="form-control" placeholder="Password" name="password">
                                     <div>
-<!--                                         <img onclick="showpass()" src="<?php echo public_url('admin/assets') ?>/img/eye-outline.svg" alt="" style="height:18px;"> -->
+                                        <!--                                         <img onclick="showpass()" src="<?php echo public_url('admin/assets') ?>/img/eye-outline.svg" alt="" style="height:18px;"> -->
                                         <?php echo form_error('password') ?>
                                     </div>
                                 </div>
