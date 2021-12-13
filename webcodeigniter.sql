@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 13, 2021 at 04:58 PM
+-- Generation Time: Dec 13, 2021 at 05:14 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -126,6 +126,7 @@ INSERT INTO `catalog` (`id`, `name`, `site_title`, `meta_desc`, `meta_key`, `par
 
 CREATE TABLE `contact` (
   `id` int(128) UNSIGNED NOT NULL,
+  `user_id` int(11) UNSIGNED NOT NULL,
   `name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `address` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
@@ -139,12 +140,12 @@ CREATE TABLE `contact` (
 -- Dumping data for table `contact`
 --
 
-INSERT INTO `contact` (`id`, `name`, `email`, `address`, `title`, `content`, `phone`, `created`) VALUES
-(16, 'map', 'phuongvy012468@gmail.com', 'Tòa Nhà VeroHomes, 7A/5/44 Thành Thái, P.14, Q.10, TP.HCM', 'map', ' map không hoạt động', '0827900042', 1638495663),
-(17, 'Đinh Nguyễn Phương Vy', 'phuongvy012468@gmail.com', 'Tòa Nhà VeroHomes, 7A/5/44 Thành Thái, P.14, Q.10, TP.HCM', 'map', ' map không hoạt động', '0827900043', 1639236586),
-(18, 'Đinh Nguyễn Phương Vy', 'phuongvy012468@gmail.com', 'Tòa Nhà VeroHomes, 7A/5/44 Thành Thái, P.14, Q.10, TP.HCM', 'dell ', ' sản phẩm này còn không', '0827900043', 1639277074),
-(19, 'Đinh Nguyễn Phương Vy', 'phuongvy012468@gmail.com', 'Tòa Nhà VeroHomes, 7A/5/44 Thành Thái, P.14, Q.10, TP.HCM', 'iphone', ' sản phẩm này còn giảm giá không', '0827900043', 1639279786),
-(20, 'Đinh Nguyễn Phương Vy', 'phuongvy012468@gmail.com', 'Tòa Nhà VeroHomes, 7A/5/44 Thành Thái, P.14, Q.10, TP.HCM', 'iphone', ' sản phẩm còn không', '0827900043', 1639296473);
+INSERT INTO `contact` (`id`, `user_id`, `name`, `email`, `address`, `title`, `content`, `phone`, `created`) VALUES
+(16, 0, 'map', 'phuongvy012468@gmail.com', 'Tòa Nhà VeroHomes, 7A/5/44 Thành Thái, P.14, Q.10, TP.HCM', 'map', ' map không hoạt động', '0827900042', 1638495663),
+(17, 0, 'Đinh Nguyễn Phương Vy', 'phuongvy012468@gmail.com', 'Tòa Nhà VeroHomes, 7A/5/44 Thành Thái, P.14, Q.10, TP.HCM', 'map', ' map không hoạt động', '0827900043', 1639236586),
+(18, 0, 'Đinh Nguyễn Phương Vy', 'phuongvy012468@gmail.com', 'Tòa Nhà VeroHomes, 7A/5/44 Thành Thái, P.14, Q.10, TP.HCM', 'dell ', ' sản phẩm này còn không', '0827900043', 1639277074),
+(19, 0, 'Đinh Nguyễn Phương Vy', 'phuongvy012468@gmail.com', 'Tòa Nhà VeroHomes, 7A/5/44 Thành Thái, P.14, Q.10, TP.HCM', 'iphone', ' sản phẩm này còn giảm giá không', '0827900043', 1639279786),
+(20, 0, 'Đinh Nguyễn Phương Vy', 'phuongvy012468@gmail.com', 'Tòa Nhà VeroHomes, 7A/5/44 Thành Thái, P.14, Q.10, TP.HCM', 'iphone', ' sản phẩm còn không', '0827900043', 1639296473);
 
 -- --------------------------------------------------------
 
@@ -527,7 +528,8 @@ ALTER TABLE `catalog`
 -- Indexes for table `contact`
 --
 ALTER TABLE `contact`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`);
 
 --
 -- Indexes for table `news`
